@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+	
+public static void main(String[] args) {
+      // TODO Auto-generated method stub
+	   Scanner sc = new Scanner(System.in);
+	   int n= sc.nextInt();
+	   int sum_y=0;
+	   int sum_m=0;
+	   int[] array = new int[n];
+	   for(int i=0; i<n; i++) {
+		   array[i]=sc.nextInt();	   
+		   sum_y+=((array[i]/30)+1)*10;
+		   sum_m+=((array[i]/60)+1)*15;		
+	   }
+	   if(sum_y<sum_m) {
+		   System.out.println("Y "+sum_y);
+	   }
+	   else if(sum_y>sum_m) {
+		   System.out.println("M "+sum_m);
+	   }
+	   else {
+		   System.out.println("Y M "+sum_m);
+	   }
+	   
+	   
+	  sc.close(); 
+   }     
+}
